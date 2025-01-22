@@ -12,18 +12,19 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 15rem;
   flex-wrap: wrap;
 }
 
 .nav-card {
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #dcdcdc;
+  box-shadow: 0 2px 20px 4px #bfbfbf;
   border-radius: 8px;
-  padding: 20px;
+  padding: 40px;
   width: 200px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
+  margin: 3rem;
 }
 
 .nav-card:hover {
@@ -39,7 +40,7 @@ h1 {
 
 .nav-card h2 {
   font-size: 1.5rem;
-  color: #4f7cff;
+  color: #011f78;
   margin: 0;
   text-align: center;
 }
@@ -81,6 +82,7 @@ h1 {
   .nav-card {
     width: 90%;
     padding: 15px;
+    margin: auto;
   }
 
   .nav-card h2 {
@@ -100,6 +102,7 @@ h1 {
   .nav-card {
     width: 95%;
     padding: 10px;
+    margin: auto;
   }
 
   .nav-card h2 {

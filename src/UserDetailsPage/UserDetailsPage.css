@@ -4,20 +4,26 @@
 
 .user-details-container h1 {
   font-size: 2rem;
-  color: #007bff;
+  color: whitesmoke;
 }
 
 .user-details-container ul {
   list-style: none;
   padding: 0;
+  color: black;
+}
+p {
+  font-size: x-large;
+  font-style: italic;
 }
 
 .user-details-container li {
-  background-color: #fff;
+  background-color: #dcdcdc;
   margin: 10px 0;
-  padding: 15px;
+  padding: 25px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  font-size: larger;
 }
 
 @media (max-width: 768px) {

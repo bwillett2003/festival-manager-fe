@@ -6,6 +6,7 @@
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 3rem;
 }
 
 .user-cards {
@@ -15,8 +16,9 @@ h1 {
 }
 
 .user-card {
-  background-color: #fff;
+  background-color: #dcdcdc;
   border: 1px solid #ddd;
+  box-shadow: 0 2px 4px #bfbfbf;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
