@@ -18,6 +18,14 @@ const App = () => {
         <Route path="/users/:id" element={<UserDetailsPage />} />
         <Route path="/schedules" element={<SchedulesPage />} />
         <Route path="/schedules/:id" element={<ScheduleDetailsPage />} />
+        <Route
+          path="*"
+          element={
+            <div className="error-page-container">
+              <h1>Page Not Found</h1>
+            </div>
+          }
+        />
       </Routes>
     </Router>
   );

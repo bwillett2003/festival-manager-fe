@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './UserDetailsPage.css';
 
 const UserDetailsPage = () => {
   const { id } = useParams();
   const [user, setUser] = useState(null);
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:3000/api/v1/users/${id}`)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('User not found');
+        }
+        return response.json();
+      })
       .then((data) => setUser(data.data))
-      .catch((error) => console.error('Error fetching user details:', error));
+      .catch(() => setError(true));
   }, [id]);
+
+  useEffect(() => {
+    if (error) {
+      navigate('/404');
+    }
+  }, [error, navigate]);
 
   if (!user) {
     return <div>Loading...</div>;
@@ -27,14 +40,7 @@ const UserDetailsPage = () => {
       <ul>
         {user.attributes.schedules.map((schedule) => (
           <li key={schedule.id}>
-            <NavLink
-              to={`/schedules/${schedule.id}`}
-              className={({ isActive }) =>
-                isActive ? 'schedule-link active' : 'schedule-link'
-              }
-            >
-              <strong>{schedule.title}</strong> - {schedule.date}
-            </NavLink>
+            <strong>{schedule.title}</strong> - {schedule.date}
           </li>
         ))}
       </ul>
