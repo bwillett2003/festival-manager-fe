@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, NavLink } from 'react-router-dom';
 import './UserDetailsPage.css';
 
 const UserDetailsPage = () => {
@@ -40,8 +40,15 @@ const UserDetailsPage = () => {
       <ul>
         {user.attributes.schedules.map((schedule) => (
           <li key={schedule.id}>
-            <strong>{schedule.title}</strong> - {schedule.date}
-          </li>
+            <NavLink
+              to={`/schedules/${schedule.id}`}
+              className={({ isActive }) =>
+                isActive ? 'schedule-link active' : 'schedule-link'
+              }
+            >
+              <strong>{schedule.title}</strong> - {schedule.date}
+            </NavLink>
+            </li>
         ))}
       </ul>
     </div>
