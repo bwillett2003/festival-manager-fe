@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './UserDetailsPage.css';
 
 const UserDetailsPage = () => {
@@ -14,7 +14,7 @@ const UserDetailsPage = () => {
   }, [id]);
 
   if (!user) {
-    return <p>Loading...</p>;
+    return <div>Loading...</div>;
   }
 
   return (
@@ -27,14 +27,9 @@ const UserDetailsPage = () => {
       <ul>
         {user.attributes.schedules.map((schedule) => (
           <li key={schedule.id}>
-            <strong>{schedule.title}</strong> - {schedule.date}
-            <ul>
-              {schedule.shows.map((show) => (
-                <li key={show.id}>
-                  {show.artist} at {show.location} ({show.time})
-                </li>
-              ))}
-            </ul>
+            <Link to={`/schedules/${schedule.id}`}>
+              <strong>{schedule.title}</strong> - {schedule.date}
+            </Link>
           </li>
         ))}
       </ul>

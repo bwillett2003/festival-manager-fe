@@ -1,0 +1,41 @@
+.schedule-details-container {
+  padding: 20px;
+}
+
+.schedule-details-container h1 {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.schedule-details-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule-details-container li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .schedule-details-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .schedule-details-container li {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-details-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .schedule-details-container li {
+    padding: 8px;
+  }
+}

@@ -5,10 +5,12 @@ import UsersPage from '../UsersPage/UsersPage';
 import UserDetailsPage from '../UserDetailsPage/UserDetailsPage';
 import SchedulesPage from '../SchedulesPage/SchedulesPage';
 import ScheduleDetailsPage from '../ScheduleDetailsPage/ScheduleDetailsPage';
+import Header from '../Header/Header';
 
 const App = () => {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/users" element={<UsersPage />} />

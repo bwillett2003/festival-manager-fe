@@ -1,0 +1,47 @@
+.homepage-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.homepage-container h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+.homepage-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.homepage-container button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .homepage-container h1 {
+    font-size: 2rem;
+  }
+
+  .homepage-container button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .homepage-container button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
