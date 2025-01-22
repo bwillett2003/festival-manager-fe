@@ -4,6 +4,11 @@ body {
   padding: 0;
   background-color: #f5f5f5;
   color: #333;
+  background-image: url('/assets/MusicFestivalPic.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 h1, h2, h3 {

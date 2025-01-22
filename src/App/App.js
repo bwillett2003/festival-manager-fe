@@ -6,6 +6,7 @@ import UserDetailsPage from '../UserDetailsPage/UserDetailsPage';
 import SchedulesPage from '../SchedulesPage/SchedulesPage';
 import ScheduleDetailsPage from '../ScheduleDetailsPage/ScheduleDetailsPage';
 import Header from '../Header/Header';
+import '../App/App.css';
 
 const App = () => {
   return (
