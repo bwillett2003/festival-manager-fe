@@ -1,7 +1,6 @@
 .header {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa00;
   padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -21,4 +20,14 @@
 .nav-link:hover {
   color: #0056b3;
   transform: scale(1.05);
+}
+
+.home-icon {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover .home-icon {
+  transform: scale(1.2);
 }

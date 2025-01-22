@@ -12,10 +12,28 @@
   padding: 0;
   color: black;
 }
+
 p {
   font-size: x-large;
   font-style: italic;
 }
+
+.schedule-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.schedule-link:hover {
+  color: #0056b3;
+  transform: scale(1.05);
+}
+
+.schedule-link.active {
+  color: #0056b3;
+}
+
 
 .user-details-container li {
   background-color: #dcdcdc;

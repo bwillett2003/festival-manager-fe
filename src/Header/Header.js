@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import HomeIcon from '../assets/home-icon.png';
 import './Header.css';
 
 const Header = () => {
@@ -12,9 +13,9 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav">
-        <Link to="/" className="nav-link">
-          Home
-        </Link>
+        <NavLink to="/" className="nav-link">
+          <img src={HomeIcon} alt="Home" className="home-icon" />
+        </NavLink>
       </nav>
     </header>
   );
