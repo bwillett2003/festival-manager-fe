@@ -19,12 +19,30 @@
 }
 
 .schedule-details-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #dcdcdc;
   margin: 10px 0;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: larger;
+}
+
+.remove-show-button {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: smaller;
+}
+
+.remove-show-button:hover {
+  background-color: red;
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -34,6 +52,7 @@
 
   .schedule-details-container li {
     padding: 10px;
+    font-size: medium;
   }
 }
 
@@ -44,5 +63,6 @@
 
   .schedule-details-container li {
     padding: 8px;
+    font-size: small;
   }
 }
