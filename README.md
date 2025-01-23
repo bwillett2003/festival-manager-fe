@@ -33,12 +33,27 @@ The application is a user-friendly tool for both attendees and festival managers
 ## Getting Started
 1. Clone the repository: [Festival Manager Front End Repository](https://github.com/bwillett2003/festival-manager-fe)
 2. Install Dependencies:
-```npm install```
+```npm install```,
+```npm i -D cypress```
+- in file ```package.json``` add the following:
+```
+{
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      // ...
+      "cypress": "cypress open" /* <----- Add this line */
+    }
+  }
+```
 3. Run the App via localhost:3001
 ```npm start```
 4. Clone the back end repository as well but refer to its README: [Festival Manager Back End Repository](https://github.com/bwillett2003/festival-manager-be)
+5. To run Cypress testing:
+```npm run cypress```
 
-- tip: Start your back end server first, then run ```npm start```, it should bring up a message stating something is running on port 3000, that would be the back end server. Hit the ```Y``` key for the front end prompt and it will automatically start on ```localhost:3001```.
+- 1st tip: Start your back end server first, then run ```npm start```, it should bring up a message stating something is running on port 3000, that would be the back end server. Hit the ```Y``` key for the front end prompt and it will automatically start on ```localhost:3001```.
+- 2nd tip: To run cypress, you will need the BE server running, 2 terminals on the FE. One to run ```npm start```  and one to run the command ```npm run cypress```.
 
 ## Approaches to Building
 - **Component-Driven Development**: The app is structured with reusable components, including:
@@ -70,6 +85,7 @@ Bad URL Demo
 ## Technologies Used
 - React: JavaScript library for building the user interface.
 - React Router: Used for handling navigation and routing within the application.
+- Cypress: for end-to-end testing to ensure the functionality of user interactions, routing, and API integration.
 
 ## Contributors
 
