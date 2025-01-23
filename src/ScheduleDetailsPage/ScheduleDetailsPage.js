@@ -12,12 +12,12 @@ const ScheduleDetailsPage = () => {
     fetch(`http://localhost:3000/api/v1/schedules/${id}`)
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Schedule not found'); // Handle non-200 responses
+          throw new Error('Schedule not found');
         }
         return response.json();
       })
       .then((data) => setSchedule(data.data))
-      .catch(() => setError(true)); // Set error state to true
+      .catch(() => setError(true));
   }, [id]);
 
   const handleRemoveShow = (showId) => {

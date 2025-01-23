@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+![DJ](./src/assets/DJMusicFestival.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Festival Manager
 
-## Available Scripts
+## Table of Contents
+- [Description](#description)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Approaches to Building](#approaches-to-building)
+- [Links](#links)
+- [App Demonstration](#app-demonstration)
+- [Technologies Used](#technologies-used)
+- [Contributors](#contributors)
 
-In the project directory, you can run:
+## Description
+Festival Manager is a React-based application that allows users to view and manage schedules for an upcoming festival. The app seamlessly integrates with a custom-built backend API to fetch user and schedule data, ensuring a dynamic and interactive experience. It offers features such as user and schedule browsing, detailed views, and the ability to manage schedules by removing shows. Designed and developed in just 2 days, the app demonstrates a clean and component-driven approach.
 
-### `npm start`
+## Features
+- **Home Page**: A central hub with two buttons—`Users` and `Schedules`—to navigate to respective sections.
+- **User Management**:
+  - View all users in the system.
+  - Access detailed user information, including their full name, email, and personalized schedule.
+  - Direct navigation from a user’s details page to their specific schedule.
+- **Schedule Management**:
+  - Browse all schedules available in the system.
+  - View detailed schedules, showing all the shows a user plans to attend.
+  - Remove a specific show from a user’s schedule directly from the schedule details page.
+- **Dynamic Routing**: Built with React Router for a seamless and intuitive user experience.
+- **Error Handling**: Displays a custom error page for invalid or bad URLs.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application is a user-friendly tool for both attendees and festival managers to track and modify schedules easily.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
+1. Clone the repository: [Festival Manager Front End Repository](https://github.com/bwillett2003/festival-manager-fe)
+2. Install Dependencies:
+```npm install```
+3. Run the App via localhost:3001
+```npm start```
+4. Clone the back end repository as well but refer to its README: [Festival Manager Back End Repository](https://github.com/bwillett2003/festival-manager-be)
 
-### `npm test`
+- tip: Start your back end server first, then run ```npm start```, it should bring up a message stating something is running on port 3000, that would be the back end server. Hit the ```Y``` key for the front end prompt and it will automatically start on ```localhost:3001```.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Approaches to Building
+- **Component-Driven Development**: The app is structured with reusable components, including:
+  - `HomePage`
+  - `Header`
+  - `UsersPage`
+  - `UserDetailsPage`
+  - `SchedulesPage`
+  - `ScheduleDetailsPage`
+  - `App`
+- **React Router**: Provides dynamic routing for seamless navigation between pages, ensuring an intuitive user experience.
+- **API Integration**: The app fetches data from a custom-built backend API ([Festival Manager API](https://github.com/bwillett2003/festival-manager-be)).
 
-### `npm run build`
+## Links
+- **GitHub Back End Repository**: [Festival Manager Back End Repository](https://github.com/bwillett2003/festival-manager-be)
+- **GitHub Front End Repository**: [Festival Manager Front End Repository](https://github.com/bwillett2003/festival-manager-fe)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## App Demonstration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+App Users Demo
+![App Users Demo](./src/assets/FestivalManagerUserDemo.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+App Schedules and delete show Demo
+![App Schedules and delete show Demo](./src/assets/FestivalManagerShowDelete.gif)
 
-### `npm run eject`
+Bad URL Demo
+![Bad URL Demo](./src/assets/FestivalManagerBadURL.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
+- React: JavaScript library for building the user interface.
+- React Router: Used for handling navigation and routing within the application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Bryan Willett
+- [LinkedIn Profile](https://www.linkedin.com/in/bryan--willett)
+- [GitHub Profile](https://github.com/bwillett2003)
